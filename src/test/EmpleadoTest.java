@@ -62,91 +62,91 @@ class EmpleadoTest {
 
 	@Test
 	void testCalculoNominaBrutaEncargado() {
-		float expected = 9;
+		float expected = 2760;
 		float actual = Empleado.calculoNominaBruta(encargado, 1500, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaVendedor() {
-		float expected = 9;
+		float expected = 2260;
 		float actual = Empleado.calculoNominaBruta(vendedor, 1500, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaOtro() {
-		float expected = 9;
+		float expected = 260;
 		float actual = Empleado.calculoNominaBruta(otro, 1500, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaVentasMesNegativa() {
-		float expected = 9;
+		float expected = 2560;
 		float actual = Empleado.calculoNominaBruta(encargado, ventasMes1, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaVentasMesMenor1000() {
-		float expected = 9;
+		float expected = 2560;
 		float actual = Empleado.calculoNominaBruta(encargado, ventasMes2, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaVentasMesEntre1000y1500() {
-		float expected = 9;
+		float expected = 2660;
 		float actual = Empleado.calculoNominaBruta(encargado, ventasMes3, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaVentasMesMayor1500() {
-		float expected = 9;
+		float expected = 2760;
 		float actual = Empleado.calculoNominaBruta(encargado, ventasMes4, 2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaHorasExtraNegativa() {
-		float expected = 9;
+		float expected = 2640;
 		float actual = Empleado.calculoNominaBruta(encargado, 1500, horasExtra1);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaBrutaHorasExtraPositiva() {
-		float expected = 9;
+		float expected = 2760;
 		float actual = Empleado.calculoNominaBruta(encargado, 1500, horasExtra2);
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	void testCalculoNominaNetaNegativa() {
-		float expected = 9;
+		float expected = -500;
 		float actual = Empleado.calculoNominaNeta(nominabruta0);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaNetaMenor2100() {
-		float expected = 9;
+		float expected = 1900;
 		float actual = Empleado.calculoNominaNeta(nominabruta1);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaNetaEntre2100y2500() {
-		float expected = 9;
+		float expected = 1955;
 		float actual = Empleado.calculoNominaNeta(nominabruta2);
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	void testCalculoNominaNetaMayor2500() {
-		float expected = 9;
+		float expected = 2214;
 		float actual = Empleado.calculoNominaNeta(nominabruta3);
 		assertEquals(expected, actual);
 	}
